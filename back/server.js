@@ -15,7 +15,6 @@ app.use("/api/users", userRoutes)
 app.use("/api/poem", poemRoutes)
 
 const PORT = process.env.PORT || 5000
-const URI = process.env.MONGO_URI
 
 const connectDB = async () => {
     try {
@@ -32,9 +31,9 @@ const connectDB = async () => {
 
 connectDB()
 
-app.get('/', (req, res) => {
-    res.status(200).send("Hello Backend")
-})
+// app.get('/', (req, res) => {
+//     res.status(200).send("Hello Backend")
+// })
 
 if(process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../front/dist")));
