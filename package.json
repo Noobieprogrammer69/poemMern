@@ -2,6 +2,7 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
@@ -9,14 +10,14 @@
   },
   "name": "back",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "devDependencies": {
     "nodemon": "^3.1.4"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon back/server.js",
     "start": "cross-env NODE_ENV=production node back/server.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix front"
+    "build": "npm install && npm install --prefix front && npm run build --prefix front"
   },
   "keywords": [],
   "author": "",

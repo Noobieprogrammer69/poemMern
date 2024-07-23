@@ -19,7 +19,7 @@ const URI = process.env.MONGO_URI
 
 const connectDB = async () => {
     try {
-        const connect = await mongoose.connect(URI, {
+        const connect = await mongoose.connect("mongodb+srv://jover:kyra@cluster0.jigz3y6.mongodb.net/", {
 
         })
 
